@@ -45,7 +45,7 @@ Resources:
     PublicSubnet1:
       Type: AWS::EC2::Subnet
       Properties:
-        VpcId: !Ref VpcCIDR
+        VpcId: !Ref myVPC
         CidrBlock: !Ref PublicSubnet1CIDR
         AvailabilityZone: !Select [ 0, !GetAZs '' ]
         MapPublicIpOnLaunch: true
@@ -57,7 +57,7 @@ Resources:
     PublicSubnet2:
       Type: AWS::EC2::Subnet
       Properties:
-        VpcId: !Ref VpcCIDR
+        VpcId: !Ref myVPC
         CidrBlock: !Ref PublicSubnet2CIDR
         AvailabilityZone: !Select [ 1, !GetAZs '' ]
         MapPublicIpOnLaunch: true
@@ -69,7 +69,7 @@ Resources:
     PrivateSubnet1:
       Type: AWS::EC2::Subnet
       Properties:
-        VpcId: !Ref VpcCIDR
+        VpcId: !Ref myVPC
         CidrBlock: !Ref PrivateSubnet1CIDR
         AvailabilityZone: !Select [ 0, !GetAZs '' ]
         MapPublicIpOnLaunch: false
@@ -80,7 +80,7 @@ Resources:
     PrivateSubnet2:
       Type: AWS::EC2::Subnet
       Properties:
-        VpcId: !Ref VpcCIDR
+        VpcId: !Ref myVPC
         CidrBlock: !Ref PrivateSubnet2CIDR
         AvailabilityZone: !Select [ 1, !GetAZs '' ]
         MapPublicIpOnLaunch: false
